@@ -1,5 +1,5 @@
 cc_library_static {
-    name: "libvibratorrosemary",
+    name: "libvibratorearth",
     shared_libs: [
         "libbase",
         "libbinder_ndk",
@@ -14,17 +14,17 @@ cc_library_static {
 }
 
 cc_binary {
-    name: "android.hardware.vibrator-service.rosemary",
+    name: "android.hardware.vibrator-service.earth",
     relative_install_path: "hw",
-    init_rc: ["vibrator-rosemary.rc"],
-    vintf_fragments: ["vibrator-rosemary.xml"],
+    init_rc: ["vibrator-earth.rc"],
+    vintf_fragments: ["vibrator-earth.xml"],
     shared_libs: [
         "libbase",
         "libbinder_ndk",
         "android.hardware.vibrator-V2-ndk_platform",
     ],
     static_libs: [
-        "libvibratorrosemary",
+        "libvibratorearth",
     ],
     srcs: ["main.cpp"],
 }
