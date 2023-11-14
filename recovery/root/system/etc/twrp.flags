@@ -1,0 +1,28 @@
+# mount point    	 fstype       device                 device2                         flags
+
+## User-writable / Storage partitions
+/boot			  emmc	      /dev/block/platform/bootdevice/by-name/boot	     flags=slotselect;display="Boot";backup=1;flashimg=1
+/vendor_boot              emmc        /dev/block/platform/bootdevice/by-name/vendor_boot     flags=display="Vendor Boot";flashimg=1;backup=1;slotselect;
+/vbmeta		          emmc	      /dev/block/platform/bootdevice/by-name/vbmeta	     flags=slotselect;display="VBMeta";backup=1;flashimg=1
+
+## Firmware
+/misc                     emmc        /dev/block/platform/bootdevice/by-name/misc
+/logo	                  emmc	      /dev/block/platform/bootdevice/by-name/logo	     flags=slotselect;backup=1
+/audio_dsp                emmc        /dev/block/platform/bootdevice/by-name/audio_dsp       flags=display=audio_dsp
+/dtbo			  emmc	      /dev/block/platform/bootdevice/by-name/dtbo	     flags=slotselect;display="DTBO";backup=1;flashimg=1
+/vbmeta_vendor		  emmc        /dev/block/platform/bootdevice/by-name/vbmeta_vendor   flags=display=vbmeta_vendor;slotselect
+/vbmeta_system            emmc        /dev/block/platform/bootdevice/by-name/vbmeta_system   flags=display=vbmeta_system;slotselect
+
+## Sensitive data
+/persist		  ext4	      /dev/block/platform/bootdevice/by-name/persist	     flags=display="Persist";fsflags=ro
+/persist_image		  emmc	      /dev/block/platform/bootdevice/by-name/persist	     flags=display="Persist";backup=1
+/protect_f	          emmc        /dev/block/platform/bootdevice/by-name/protect1        flags=backup=1;display=EFS
+/protect_s	          emmc        /dev/block/platform/bootdevice/by-name/protect2        flags=backup=1
+/nvdata			  emmc	      /dev/block/platform/bootdevice/by-name/nvdata	     flags=backup=1
+/nvcfg		          emmc	      /dev/block/platform/bootdevice/by-name/nvcfg	     flags=backup=1
+/nvram	                  emmc        /dev/block/platform/bootdevice/by-name/nvram           flags=backup=1
+/persistent	          emmc        /dev/block/platform/bootdevice/by-name/frp             flags=display="Persistent";backup=1;
+
+# external
+/external_sd	          vfat	      /dev/block/mmcblk0p1	/dev/block/mmcblk0	     flags=display="MicroSD Card";storage;wipeingui;removable
+/usb-otg	          vfat        /dev/block/sda1           /dev/block/sda               flags=fsflags=utf8;display="USB-Storage";storage;wipeingui;removable
