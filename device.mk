@@ -53,12 +53,6 @@ PRODUCT_PACKAGES += \
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
-# VNDK
-PRODUCT_TARGET_VNDK_VERSION := 32
-
-# API
-PRODUCT_SHIPPING_API_LEVEL := 32
-
 # fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
