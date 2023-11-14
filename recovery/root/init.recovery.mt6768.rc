@@ -55,7 +55,7 @@ service keymaster-4-1 /system/bin/android.hardware.keymaster@4.1-service.beanpod
     oneshot
     seclabel u:r:recovery:s0
 
-service vibrator-rosemary /system/bin/hw/android.hardware.vibrator-service.rosemary
+service vibrator-earth /system/bin/hw/android.hardware.vibrator-service.earth
     user root
     group root
     class hal
