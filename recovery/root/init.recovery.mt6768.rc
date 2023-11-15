@@ -51,12 +51,6 @@ service keymaster-4-1 /system/bin/android.hardware.keymaster@4.1-service.beanpod
     disabled
     seclabel u:r:recovery:s0
 
-service tee-1-1 /system/bin/vendor.trustonic.tee@1.1-service
-    user root
-    group root
-    disabled
-    seclabel u:r:recovery:s0
-
 service vibrator-earth /system/bin/hw/android.hardware.vibrator-service.earth
     user root
     group root
@@ -66,25 +60,21 @@ service vibrator-earth /system/bin/hw/android.hardware.vibrator-service.earth
 on property:vendor.sys.listener.registered=true
     start gatekeeper-1-0
     start keymaster-4-1
-    start tee-1-1
    
 on property:ro.crypto.state=unsupported
     stop teei_daemon
     stop keymaster-4-1
     stop gatekeeper-1-0
-    stop tee-1-1
 
 on property:ro.crypto.state=unencrypted
     stop teei_daemon
     stop keymaster-4-1
     stop gatekeeper-1-0
-    stop tee-1-1
         
 on property:twrp.all.users.decrypted=true
     stop teei_daemon
     stop keymaster-4-1
     stop gatekeeper-1-0
-    stop tee-1-1
    
 on boot
     start boot-hal-1-2
