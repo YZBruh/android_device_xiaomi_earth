@@ -1,28 +1,44 @@
 # mount point    	 fstype       device                 device2                         flags
 
+# Main Image Partitions
+/system_image      emmc    	/dev/block/bootdevice/by-name/system		    	flags=display="System (Image)";backup=1;flashimg=1;slotselect;
+/vendor_image      emmc    	/dev/block/bootdevice/by-name/vendor			    flags=display="Vendor (Image)";backup=1;flashimg=1;slotselect;
+/product_image     emmc     /dev/block/bootdevice/by-name/product         flags=display="Product (Image)";backup=1;flashimg=1;slotselect;
+/systemext_image   emmc    	/dev/block/bootdevice/by-name/system_ext			flags=display="System_EXT (Image)";backup=1;flashimg=1;slotselect;
+
+# Other Partitions
+/system_root       ext4     /dev/block/bootdevice/by-name/system                    flags=display="System";backup=0;wipeingui;slotselect;
+/system_root       erofs    /dev/block/bootdevice/by-name/system                    flags=display="System";backup=0;wipeingui;slotselect;
+/vendor            ext4     /dev/block/bootdevice/by-name/vendor                    flags=display="Vendor";backup=0;wipeingui;slotselect;mounttodecrypt;
+/vendor            erofs   	/dev/block/bootdevice/by-name/vendor                    flags=display="Vendor";backup=0;wipeingui;slotselect;mounttodecrypt;
+/system_ext        ext4     /dev/block/bootdevice/by-name/system_ext                flags=display="System EXT";backup=0;wipeingui;slotselect;
+/system_ext        erofs    /dev/block/bootdevice/by-name/system_ext                flags=display="System EXT";backup=0;wipeingui;slotselect;
+/product           ext4     /dev/block/bootdevice/by-name/product                   flags=display="Product";backup=0;wipeingui;slotselect;
+/product           erofs    /dev/block/bootdevice/by-name/product                   flags=display="Product";backup=0;wipeingui;slotselect;
+
 ## User-writable / Storage partitions
-/boot			  emmc	      /dev/block/platform/bootdevice/by-name/boot	     flags=slotselect;display="Boot";backup=1;flashimg=1
-/vendor_boot              emmc        /dev/block/platform/bootdevice/by-name/vendor_boot     flags=display="Vendor Boot";flashimg=1;backup=1;slotselect;
-/vbmeta		          emmc	      /dev/block/platform/bootdevice/by-name/vbmeta	     flags=slotselect;display="VBMeta";backup=1;flashimg=1
+/boot			         emmc	      /dev/block/platform/bootdevice/by-name/boot	          flags=slotselect;display="Boot";backup=1;flashimg=1
+/vendor_boot       emmc       /dev/block/platform/bootdevice/by-name/vendor_boot    flags=display="Vendor Boot";flashimg=1;backup=1;slotselect;
+/vbmeta		         emmc	      /dev/block/platform/bootdevice/by-name/vbmeta	        flags=slotselect;display="VBMeta";backup=1;flashimg=1
 
 ## Firmware
-/misc                     emmc        /dev/block/platform/bootdevice/by-name/misc
-/logo	                  emmc	      /dev/block/platform/bootdevice/by-name/logo	     flags=slotselect;backup=1
-/audio_dsp                emmc        /dev/block/platform/bootdevice/by-name/audio_dsp       flags=display=audio_dsp
-/dtbo			  emmc	      /dev/block/platform/bootdevice/by-name/dtbo	     flags=slotselect;display="DTBO";backup=1;flashimg=1
-/vbmeta_vendor		  emmc        /dev/block/platform/bootdevice/by-name/vbmeta_vendor   flags=display=vbmeta_vendor;slotselect
-/vbmeta_system            emmc        /dev/block/platform/bootdevice/by-name/vbmeta_system   flags=display=vbmeta_system;slotselect
+/misc              emmc       /dev/block/platform/bootdevice/by-name/misc
+/logo	             emmc	      /dev/block/platform/bootdevice/by-name/logo	          flags=slotselect;backup=1
+/audio_dsp         emmc       /dev/block/platform/bootdevice/by-name/audio_dsp      flags=display=audio_dsp
+/dtbo			         emmc	      /dev/block/platform/bootdevice/by-name/dtbo	          flags=slotselect;display="DTBO";backup=1;flashimg=1
+/vbmeta_vendor		 emmc       /dev/block/platform/bootdevice/by-name/vbmeta_vendor  flags=display=vbmeta_vendor;slotselect
+/vbmeta_system     emmc       /dev/block/platform/bootdevice/by-name/vbmeta_system  flags=display=vbmeta_system;slotselect
 
 ## Sensitive data
-/persist		  ext4	      /dev/block/platform/bootdevice/by-name/persist	     flags=display="Persist";fsflags=ro
-/persist_image		  emmc	      /dev/block/platform/bootdevice/by-name/persist	     flags=display="Persist";backup=1
-/protect_f	          emmc        /dev/block/platform/bootdevice/by-name/protect1        flags=backup=1;display=EFS
-/protect_s	          emmc        /dev/block/platform/bootdevice/by-name/protect2        flags=backup=1
-/nvdata			  emmc	      /dev/block/platform/bootdevice/by-name/nvdata	     flags=backup=1
-/nvcfg		          emmc	      /dev/block/platform/bootdevice/by-name/nvcfg	     flags=backup=1
-/nvram	                  emmc        /dev/block/platform/bootdevice/by-name/nvram           flags=backup=1
-/persistent	          emmc        /dev/block/platform/bootdevice/by-name/frp             flags=display="Persistent";backup=1;
+/persist		       ext4	      /dev/block/platform/bootdevice/by-name/persist	      flags=display="Persist";fsflags=ro
+/persist_image		 emmc	      /dev/block/platform/bootdevice/by-name/persist	      flags=display="Persist İmage";backup=1
+/protect_f	       emmc       /dev/block/platform/bootdevice/by-name/protect1       flags=backup=1;display=EFS
+/protect_s	       emmc       /dev/block/platform/bootdevice/by-name/protect2       flags=backup=1
+/nvdata			       emmc	      /dev/block/platform/bootdevice/by-name/nvdata	        flags=backup=1
+/nvcfg		         emmc	      /dev/block/platform/bootdevice/by-name/nvcfg	        flags=backup=1
+/nvram	           emmc       /dev/block/platform/bootdevice/by-name/nvram          flags=backup=1
+/persistent	       emmc       /dev/block/platform/bootdevice/by-name/frp            flags=display="Persistent";backup=1;
 
 # external
-/external_sd	          vfat	      /dev/block/mmcblk1p1	/dev/block/mmcblk1	     flags=display="MicroSD Card";storage;wipeingui;removable;fsflags="utf8"
-/usb-otg	          vfat        /dev/block/sda1           /dev/block/sda               flags=fsflags=utf8;display="USB-Storage";storage;wipeingui;removable;fsflags="utf8"
+/external_sd	     vfat	      /dev/block/mmcblk1p1 	    /dev/block/mmcblk1	        flags=display="MicroSD Card";storage;wipeingui;removable;fsflags="utf8"
+/usb-otg	         vfat       /dev/block/sda1           /dev/block/sda              flags=fsflags=utf8;display="USB-Storage";storage;wipeingui;removable;fsflags="utf8"
