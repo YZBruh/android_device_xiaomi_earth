@@ -60,7 +60,6 @@ service vibrator-earth /system/bin/hw/android.hardware.vibrator-service.earth
 on property:vendor.sys.listener.registered=true
     start gatekeeper-1-0
     start keymaster-4-1
-    start gatekeeper-1-0
    
 on property:ro.crypto.state=unsupported
     stop teei_daemon
@@ -74,7 +73,7 @@ on property:ro.crypto.state=unencrypted
         
 on property:twrp.all.users.decrypted=true
     stop teei_daemon
-    stop keymaster-4-0
+    stop keymaster-4-1
     stop gatekeeper-1-0
    
 on boot
