@@ -22,6 +22,39 @@ Video        | 1080p@30fps
 Camera (Front)  | 8 MP, f/2.0, (wide)
 Features| Fingerprint (in the back), accelerometer, proximity, compass
 
+## Situation
+- [y] Correct screen/recovery size
+- [~] Working Touch, screen
+- [y] Backup to internal/microSD
+- [y] Restore from internal/microSD
+- [y] reboot to system
+- [y] ADB
+
+Medium checks
+- [y] update.zip sideload
+- [y] UI colors (red/blue inversions)
+- [y] Screen goes off and on
+- [y] F2FS/EXT4 Support, exFAT/NTFS where supported
+- [y] all important partitions listed in mount/backup lists
+- [y] backup/restore to/from external (USB-OTG) storage
+- [y] backup/restore to/from adb (https://gerrit.omnirom.org/#/c/15943/)
+- [y] decrypt /data
+- [y] Correct date
+
+Minor checks
+- [y] MTP export
+- [y] reboot to bootloader
+- [y] reboot to recovery
+- [y] poweroff
+- [y] battery level
+- [y] temperature
+- [y] encrypted backups
+- [nt] input devices via USB (USB-OTG) - keyboard, mouse and disks (not supported by the device)
+- [nt] USB mass storage export
+- [nt] set brightness
+- [y] vibrate
+- [y] screenshot
+- [nt] partition SD card
 
 ## Device picture
 
