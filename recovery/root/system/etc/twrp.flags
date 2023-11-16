@@ -30,7 +30,7 @@
 /vbmeta_system     emmc       /dev/block/platform/bootdevice/by-name/vbmeta_system  flags=display=vbmeta_system;slotselect
 
 ## Sensitive data
-/persist		       ext4	      /dev/block/platform/bootdevice/by-name/persist	      flags=display="Persist";fsflags=ro
+/persist		       ext4	      /dev/block/platform/bootdevice/by-name/persist	      flags=display="Persist"
 /persist_image		 emmc	      /dev/block/platform/bootdevice/by-name/persist	      flags=display="Persist İmage";backup=1
 /protect_f	       emmc       /dev/block/platform/bootdevice/by-name/protect1       flags=backup=1;display=EFS
 /protect_s	       emmc       /dev/block/platform/bootdevice/by-name/protect2       flags=backup=1
