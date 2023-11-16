@@ -134,7 +134,7 @@ TW_Y_OFFSET := 60
 TW_H_OFFSET := -60
 
 # DEVICE
-TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
+TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TW_MAX_BRIGHTNESS := 500
 TW_DEFAULT_BRIGHTNESS := 90
 TW_HAS_NO_RECOVERY_PARTITION := true
