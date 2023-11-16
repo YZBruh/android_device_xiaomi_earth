@@ -50,12 +50,12 @@ Minor checks
 - [X] battery level
 - [X] temperature
 - [X] encrypted backups
-- [] input devices via USB (USB-OTG) - keyboard, mouse and disks (not supported by the device)
-- [] USB mass storage export
+- [ ] input devices via USB (USB-OTG) - keyboard, mouse and disks (not supported by the device)
+- [ ] USB mass storage export
 - [X] set brightness
 - [X] vibrate
 - [X] screenshot
-- [] partition SD card
+- [ ] partition SD card
 
 ## Device picture
 
