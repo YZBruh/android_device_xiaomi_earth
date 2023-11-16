@@ -109,9 +109,6 @@ PLATFORM_VERSION := 99
 BOARD_SUPPRESS_SECURE_ERASE := true
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
 
-# Crypto
-TW_INCLUDE_CRYPTO := true
-
 # Additional binaries & libraries needed for recovery
 TARGET_RECOVERY_DEVICE_MODULES += \
     libkeymaster4 \
