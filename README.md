@@ -2,6 +2,7 @@
 ===========================================
 
 The Redmi 12C is a budget range smartphone from Redmi, Released 2022, December 31
+This project is licensed under the terms of the Boost Software License
 
 ## Device specifications
 
