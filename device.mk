@@ -1,5 +1,9 @@
 LOCAL_PATH := device/xiaomi/earth
 
+# UI
+TARGET_SCREEN_WIDTH := 720
+TARGET_SCREEN_HEIGHT := 1650
+
 # A/B
 AB_OTA_PARTITIONS += \
     system \
