@@ -15,7 +15,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 $(call inherit-product, device/xiaomi/earth/device.mk)
 
 # Inherit some common TWRP stuff.
-$(call inherit-product, vendor/twrp/config/common.mk)
+$(call inherit-product, vendor/pb/config/common.mk)
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -23,7 +23,7 @@ PRODUCT_PACKAGES += \
     charger
 
 # Product Specifics
-PRODUCT_NAME := twrp_earth
+PRODUCT_NAME := omni_earth
 PRODUCT_DEVICE := earth
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := Redmi 12C
