@@ -13,3 +13,4 @@ ro.hardware.gatekeeper=beanpod
 # Attachments 
 ro.postinstall.fstab.prefix=/system
 persist.sys.binary_xml=false
+ro.boot.product.vendor.sku=earth
