@@ -136,6 +136,7 @@ TW_INCLUDE_FASTBOOTD := true
 TW_Y_OFFSET := 60
 TW_H_OFFSET := -60
 TW_INTERNAL_STORAGE_PATH := "/data/media/0"
+TW_EXCLUDE_ENCRYPTED_BACKUPS := false
 
 # DEVICE
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
