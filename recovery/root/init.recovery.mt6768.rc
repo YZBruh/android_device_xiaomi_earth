@@ -47,7 +47,6 @@ service gatekeeper-1-0 /system/bin/android.hardware.gatekeeper@1.0-service
     seclabel u:r:recovery:s0
 
 service keymaster-4-1 /system/bin/android.hardware.keymaster@4.1-service.beanpod
-    interface android.hardware.keymaster@4.0::IKeymasterDevice default
     interface android.hardware.keymaster@4.1::IKeymasterDevice default
     user root
     group root drmrpc
@@ -55,7 +54,7 @@ service keymaster-4-1 /system/bin/android.hardware.keymaster@4.1-service.beanpod
     oneshot
     seclabel u:r:recovery:s0
 
-service vibrator-earth /system/bin/hw/android.hardware.vibrator-service.rosemary
+service vibrator-earth /system/bin/hw/android.hardware.vibrator-service.earth
     user root
     group root
     class hal
