@@ -7,11 +7,15 @@ ALLOW_MISSING_DEPENDENCIES := true
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS += \
     system \
+    system_ext \
     vendor \
+    vendor_dlkm \
     product \
     boot \
     vbmeta_vendor \
-    vbmeta_system
+    vbmeta_system \
+    odm \
+    odm_dlkm
 
 BOARD_USES_RECOVERY_AS_BOOT := true
 
