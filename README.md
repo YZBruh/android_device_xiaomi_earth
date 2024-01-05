@@ -28,7 +28,7 @@ Features| Fingerprint (in the back), accelerometer, proximity, compass
 - [ ] Working Touch, screen
 - [X] Backup to internal/microSD
 - [X] Restore from internal/microSD
-- [X] reboot to system
+- [ ] reboot to system
 - [X] ADB
 
 Medium checks
@@ -39,7 +39,7 @@ Medium checks
 - [X] all important partitions listed in mount/backup lists
 - [X] backup/restore to/from external (USB-OTG) storage
 - [X] backup/restore to/from adb (https://gerrit.omnirom.org/#/c/15943/)
-- [X] decrypt /data
+- [ ] decrypt /data
 - [X] Correct date
 
 Minor checks
