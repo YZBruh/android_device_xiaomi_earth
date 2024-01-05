@@ -4,18 +4,6 @@ LOCAL_PATH := device/xiaomi/earth
 TARGET_SCREEN_WIDTH := 720
 TARGET_SCREEN_HEIGHT := 1650
 
-# A/B
-AB_OTA_PARTITIONS += \
-    system \
-    system \
-    vendor \
-    vendor \
-    product \
-    product \
-    boot \
-    vbmeta_vendor \
-    vbmeta_system
-
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
