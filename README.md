@@ -1,5 +1,4 @@
-# TWRP Device Tree for Xiaomi Redmi 12C (earth)
-===========================================
+# Custom Recovery Device Tree for Xiaomi Redmi 12C (earth)
 
 The Redmi 12C is a budget range smartphone from Redmi, Released 2022, December 31
 This project is licensed under the terms of the Boost Software License
@@ -8,7 +7,7 @@ This project is licensed under the terms of the Boost Software License
 
 Basic   | Spec Sheet
 -------:|:-------------------------
-OS        | Android 12, MIUI 13        
+OS      | Android 12, MIUI 13        
 CPU     | Octa-core (2x2.0 GHz Cortex-A75 & 6x1.8 GHz Cortex-A55)
 Chipset | MediaTek Helio G85 (12nm)
 GPU     | Mali-G52 MC2
@@ -19,7 +18,7 @@ Battery | Non-removable Li-Ion 5000 mAh battery
 Resolution | 1080 x 2400 pixels, 20:9 ratio (~405 ppi density)
 Camera (Rear)  | 50 MP, f/1.8, (wide) / 0.8 MP, f/2.4 (depth)
 Rear Camera Features | LED flash, HDR, panorama
-Video        | 1080p@30fps        
+Video   | 1080p@30fps        
 Camera (Front)  | 8 MP, f/2.0, (wide)
 Features| Fingerprint (in the back), accelerometer, proximity, compass
 
@@ -50,7 +49,7 @@ Minor checks
 - [X] battery level
 - [X] temperature
 - [X] encrypted backups
-- [ ] input devices via USB (USB-OTG) - keyboard, mouse and disks (not supported by the device)
+- [ ] input devices via USB (USB-OTG) - keyboard, mouse and disks
 - [ ] USB mass storage export
 - [X] set brightness
 - [X] vibrate
