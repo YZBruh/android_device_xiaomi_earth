@@ -1,4 +1,4 @@
-LOCAL_PATH := device/xiaomi/earth
+LOCAL_PATH := device/xiaomi/aether
 
 # Recovery UI
 TARGET_SCREEN_WIDTH := 720
