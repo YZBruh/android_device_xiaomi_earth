@@ -1,4 +1,0 @@
-service vibrator-earth /vendor/bin/hw/android.hardware.vibrator-service.earth
-    class hal
-    user root
-    group root
