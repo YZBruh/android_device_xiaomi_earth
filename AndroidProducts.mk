@@ -1,7 +1,7 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_earth.mk
+    $(LOCAL_DIR)/twrp_aether.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_earth-user \
-    twrp_earth-userdebug \
-    twrp_earth-eng
+    twrp_aether-user \
+    twrp_aether-userdebug \
+    twrp_aether-eng
