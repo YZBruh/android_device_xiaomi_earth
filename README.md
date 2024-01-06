@@ -10,7 +10,7 @@ Basic   | Spec Sheet
 -------:|:-------------------------
 OS        | Android 12, MIUI 13        
 CPU     | Octa-core (2x2.0 GHz Cortex-A75 & 6x1.8 GHz Cortex-A55)
-Chipset | MediaTek Helio G88 (12nm)
+Chipset | MediaTek Helio G85 (12nm)
 GPU     | Mali-G52 MC2
 Memory  | 4GB/6GB RAM
 Storage | 64GB/128GB
