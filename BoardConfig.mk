@@ -1,4 +1,4 @@
-DEVICE_PATH := device/xiaomi/earth
+DEVICE_PATH := device/xiaomi/aether
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -121,7 +121,7 @@ BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 1
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := earth
+TARGET_OTA_ASSERT_DEVICE := aether
 
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
@@ -150,7 +150,7 @@ TW_SCREEN_BLANK_ON_BOOT := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
 TW_INCLUDE_REPACKTOOLS := true
-TW_DEVICE_VERSION := gale-rc3
+TW_DEVICE_VERSION := Redmi 12C Dev Stuffs 
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 TARGET_USES_MKE2FS := true
