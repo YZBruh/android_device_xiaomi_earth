@@ -1,6 +1,6 @@
-# Custom Recovery Device Tree for Xiaomi Redmi 12C (earth)
+# Custom Recovery Device Tree for Xiaomi Redmi 12C (aether)
 
-The Redmi 12C is a budget range smartphone from Redmi, Released 2022, December 31
+The Redmi 12C NFC is a budget range smartphone from Redmi, Released 2022, December 31
 This project is licensed under the terms of the Boost Software License
 
 ## Device specifications
@@ -20,7 +20,7 @@ Camera (Rear)  | 50 MP, f/1.8, (wide) / 0.8 MP, f/2.4 (depth)
 Rear Camera Features | LED flash, HDR, panorama
 Video   | 1080p@30fps        
 Camera (Front)  | 8 MP, f/2.0, (wide)
-Features| Fingerprint (in the back), accelerometer, proximity, compass
+Features| Fingerprint (in the back), accelerometer, proximity, compass, NFC
 
 ## Situation
 - [X] Correct screen/recovery size
