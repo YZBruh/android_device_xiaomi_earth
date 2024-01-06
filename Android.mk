@@ -1,5 +1,5 @@
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),earth)
+ifeq ($(TARGET_DEVICE),aether)
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
 endif
