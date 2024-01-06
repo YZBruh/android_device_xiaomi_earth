@@ -1,4 +1,4 @@
-# Custom Recovery Device Tree for Xiaomi Redmi 12C (aether)
+# Custom Recovery Device Tree for Xiaomi Redmi 12C NFC (aether)
 
 The Redmi 12C NFC is a budget range smartphone from Redmi, Released 2022, December 31
 This project is licensed under the terms of the Boost Software License
