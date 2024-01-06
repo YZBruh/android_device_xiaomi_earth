@@ -1,9 +1,10 @@
 LOCAL_PATH := device/xiaomi/earth
 
-# UI
+# Recovery UI
 TARGET_SCREEN_WIDTH := 720
 TARGET_SCREEN_HEIGHT := 1650
 
+# A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
@@ -24,9 +25,9 @@ PRODUCT_PACKAGES_DEBUG += \
     bootctrl \
     update_engine_client
 
-PRODUCT_PACKAGES := \
-   bootctrl.mt6768 \
-   bootctrl.mt6768.recovery
+PRODUCT_PACKAGES += \
+    bootctrl.mt6768 \
+    bootctrl.mt6768.recovery
 
 PRODUCT_PACKAGES += \
     otapreopt_script \
@@ -34,6 +35,12 @@ PRODUCT_PACKAGES += \
     update_engine \
     update_verifier \
     update_engine_sideload
+
+# VNDK
+PRODUCT_TARGET_VNDK_VERSION := 31
+
+# API
+PRODUCT_SHIPPING_API_LEVEL := 31
 
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -46,17 +53,6 @@ PRODUCT_PACKAGES += \
 # MTK PlPath Utils
 PRODUCT_PACKAGES += \
     mtk_plpath_utils.recovery
-
-# Additional Libraries
-TARGET_RECOVERY_DEVICE_MODULES += \
-    libkeymaster4 \
-    libkeymaster41 \
-    libpuresoftkeymasterdevice
-
-RECOVERY_LIBRARY_SOURCE_FILES += \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster4.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster41.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so
 
 # Health HAL
 PRODUCT_PACKAGES += \
