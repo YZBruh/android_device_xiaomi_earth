@@ -3,7 +3,7 @@ DEVICE_PATH := device/xiaomi/earth
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
 
-# AOSP
+# For building with AOSP manifest
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
@@ -90,13 +90,14 @@ TARGET_BOARD_PLATFORM := mt6768
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
-TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 
 # System-as-root
 BOARD_SUPPRESS_SECURE_ERASE := true
-BOARD_ROOT_EXTRA_FOLDERS += metadata
+
+# Metadata
+BOARD_USES_METADATA_PARTITION := true
 
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
@@ -136,7 +137,7 @@ TW_SCREEN_BLANK_ON_BOOT := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
 TW_INCLUDE_REPACKTOOLS := true
-TW_DEVICE_VERSION := idkHelpPls
+TW_DEVICE_VERSION := "Redmi 12C Dev Stuffs"
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 TARGET_USES_MKE2FS := true
@@ -150,11 +151,15 @@ TW_INCLUDE_LIBRESETPROP := true
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TW_DEFAULT_BRIGHTNESS := 600
 TW_FRAMERATE := 60
-TW_Y_OFFSET := 60
-TW_H_OFFSET := -60
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_NO_HAPTICS := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 RECOVERY_SDCARD_ON_DATA := true
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.usb0/lun.%d/file
 TW_HAS_NO_RECOVERY_PARTITION := true
 TW_EXCLUDE_APEX := true
+
+# Crypto
+TW_INCLUDE_CRYPTO := true
+TW_INCLUDE_CRYPTO_FBE := true
+TW_INCLUDE_FBE_METADATA_DECRYPT := true
