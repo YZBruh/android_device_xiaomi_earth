@@ -54,7 +54,7 @@ Minor checks
 - [X] set brightness
 - [X] vibrate
 - [X] screenshot
-- [ ] partition SD card
+- [x] partition SD card
 
 ## Device picture
 
